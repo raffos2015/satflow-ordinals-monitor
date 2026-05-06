@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Satflow Ordinals Monitoring</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ✅ HEADER */
+header {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg,#020617,#0f172a);
+  border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.live {
+  color: #22c55e;
+  margin-top: 10px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {opacity:0.5;}
+  to {opacity:1;}
+}
+
+/* ✅ LAYOUT */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ✅ INSIGHT BAR */
+.insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.insights div {
+  background: #0f172a;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  font-size: 0.85rem;
+}
+
+/* ✅ TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+th {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+tr {
+  transition: all 0.2s ease;
+}
+
+tr:hover {
+  transform: scale(1.01);
+  background: #0f172a;
+}
+
+/* ✅ COLLECTION */
+.collection-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collection-cell img {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.collection-cell img:hover {
+  transform: scale(1.2);
+}
+
+.collection-name {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* ✅ COLORS */
+.up { color: #22c55e; }
+.down { color: #ef4444; }
+
+/* ✅ BEST DEAL */
+.best {
+  background: linear-gradient(90deg, rgba(34,197,94,0.15), transparent);
+  border-left: 3px solid #22c55e;
+}
+
+/* ✅ BADGES */
+.badge {
+  padding: 3px 6px;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.buy { background: #22c55e; color: black; }
+.floor { background: #ef4444; color: white; }
+.rare { background: #3b82f6; }
+.new { background: #facc15; color: black; }
+
+/* ✅ BAR */
+.bar {
+  height: 5px;
+  background: #1e293b;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.bar-fill {
+  height: 100%;
+  background: #22c55e;
+}
+
+/* ✅ ACTIONS */
+.actions {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 2px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.view {
+  background: #334155;
+  color: white;
+}
+
+.fast {
+  background: linear-gradient(135deg,#22c55e,#4ade80);
+  color: black;
+}
+
+.fast:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Satflow Ordinals Monitoring</h1>
+  <p>Real-time opportunity detection • Smart filtering • Fast execution access</p>
+  <div class="live">● Live feed connected</div>
+</header>
+
+<main>
+
+<!-- ✅ INSIGHTS -->
+<div class="insights">
+  <div>🔥 Best Deal: Frogs #1182 (−2.5%)</div>
+  <div>📊 Puppets stable (+0.06%)</div>
+  <div>🚀 NodeMonkes momentum ↑</div>
+</div>
+
+<table>
+
+<thead>
+<tr>
+  <th>Collection</th>
+  <th>Ordinal</th>
+  <th>Listed</th>
+  <th>Floor</th>
+  <th>Price</th>
+  <th>% Floor</th>
+  <th>Top Bid</th>
+  <th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr class="best">
+<td>
+<div class="collection-cell">
+  <img src="frogs.png">
+  <span class="collection-name">Bitcoin Frogs</span>
+</div>
+</td>
+<td>#1182</td>
+<td>1 min ago</td>
+<td>0.020 BTC</td>
+
+<td class="down">
+  0.0195 BTC
+  <span class="badge buy">BUY</span>
+  <span class="badge rare">RARE</span>
+  <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+</td>
+
+<td class="down">-2.5%</td>
+<td>0.018 BTC</td>
+
+<td class="actions">
+  <a href="#" class="btn view">View</a>
+  <a href="#" class="btn fast">⚡ Buy Fast</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="collection-cell">
+  <img src="nodemonkes.png">
+  <span class="collection-name">NodeMonkes</span>
+</div>
+</td>
+<td>#8833</td>
+<td>2 min ago</td>
+<td>0.13 BTC</td>
+
+<td class="down">
+  0.128 BTC
+  <span class="badge floor">BELOW FLOOR</span>
+  <span class="badge new">NEW</span>
+  <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+</td>
+
+<td class="down">-1.5%</td>
+<td>0.125 BTC</td>
+
+<td class="actions">
+  <a href="#" class="btn view">View</a>
+  <a href="#" class="btn fast">⚡ Buy Fast</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<div class="collection-cell">
+  <img src="puppets.png">
+  <span class="collection-name">Bitcoin Puppets</span>
+</div>
+</td>
+
+<td>#2027</td>
+<td>3 min ago</td>
+<td>0.0155 BTC</td>
+
+<td class="up">
+  0.0156 BTC
+  <span class="badge new">NEW</span>
+</td>
+
+<td class="up">+0.06%</td>
+<td>0.0140 BTC</td>
+
+<td class="actions">
+  <a href="#" class="btn view">View</a>
+  <a href="#" class="btn fast">⚡ Buy Fast</a>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</main>
+
+</body>
+</html>
